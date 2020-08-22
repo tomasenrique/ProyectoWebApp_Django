@@ -29,6 +29,7 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+
     <div class="container">
         <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Home' %}">
             Gestión de Pedidos
@@ -55,31 +56,37 @@
                     <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Inicio</a>
                 </li>
 
-                {% if request.path == '/' %} active {% endif %}
+                {% if request.path == '/home' %} active {% endif %}
                 {% if request.path == '/servicios' %} active {% endif %}
                 {% if request.path == '/tienda' %} active {% endif %}
                 {% if request.path == '/contactos' %} active {% endif %}
                 {% if request.path == '/blog' %} active {% endif %}
 
+
+                {% if '/' in request.path %} active {% endif %}   ==>> este no funciona bien
+                {% if '/servicios' in request.path %} active {% endif %}
+                {% if '/tienda' in request.path %} active {% endif %}
+                {% if '/contacto' in request.path %} active {% endif %}
+                {% if '/blog' in request.path %} active {% endif %}
+
                 {% endcomment %}
 
-                <li class="nav-item active px-lg-4">
+                <li class="nav-item {% if '/home' in request.path %} active {% endif %}px-lg-4">
                     <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Inicio</a>
                 </li>
 
-                <li class="nav-item {% if request.path == '/servicios' %} active {% endif %} px-lg-4 ">
+                <li class="nav-item {% if '/servicios' in request.path %} active {% endif %} px-lg-4 ">
                     <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicios' %}">Servicios</a>
                 </li>
 
-
-                <li class="nav-item {% if request.path == '/tienda' %} active {% endif %} px-lg-4">
+                <li class="nav-item {% if '/tienda' in request.path %} active {% endif %}px-lg-4">
                     <a class="nav-link text-uppercase text-expanded" href="{% url 'Tienda' %}">Tienda</a>
                 </li>
 
-                <li class="nav-item {% if request.path == '/contactos' %} active {% endif %} px-lg-4">
+                <li class="nav-item {% if '/contacto' in request.path %} active {% endif %} px-lg-4">
                     <a class="nav-link text-uppercase text-expanded" href="{% url 'Contacto' %}">Contacto</a>
                 </li>
-                <li class="nav-item {% if request.path == '/blog' %} active {% endif %} px-lg-4">
+                <li class="nav-item {% if '/blog' in request.path %} active {% endif %} px-lg-4">
                     <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
                 </li>
 
