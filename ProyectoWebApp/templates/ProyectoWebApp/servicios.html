@@ -9,25 +9,25 @@
 
 
 
+    {# Contenido que varia aqui #}
+
+    {# Aqui se esta trayendo los datos de la BBDD y la imagen guardada #}
+    {% for servicio in servicios %}
+        <div>
+            <p>
+            <h2 style="color: white">{{ servicio.titulo }}</h2>
+            <p style="color: white">{{ servicio.contenido }}</p>
+            <p>
+                <img src="{{ servicio.imagen.url }}">  {# Mostrada la imagen, url agrega la ubicación #}
+            </p>
+            
+
+            </p>
+        </div>
+
+    {% endfor %}
 
 
 
-
-
-    
-{# Contenido que varia aqui #}
-<p></p>
-
-
-
-
-
-
-
-
-
-
-
-{#  Se cierra el cargador del contenido  #}
-{% endblock %}
+{% endblock %}  {#  Se cierra el cargador del contenido  #}
 {#  #}
