@@ -5,7 +5,11 @@ from django.db import models
 class Servicio(models.Model):
     titulo = models.CharField(max_length=50)
     contenido = models.CharField(max_length=50)
-    imagen = models.ImageField()  # campo para usar una imagen, requiere instalar 'pillow'
+
+    """ Campo para usar una imagen, requiere instalar 'pillow'
+    lo siguiente 'upload_to' especifica la direccion para guardar las imagenes y crea la sub carpeta 'servicio' donde 
+    se almacenara el contenido        """
+    imagen = models.ImageField(upload_to='servicios')
     created = models.DateTimeField(auto_now_add=True)  # Para guardar la fecha de creacion de un servicio
     updated = models.DateTimeField(auto_now_add=True)  # Para poner la fecha en que se actualizo el servicio
 

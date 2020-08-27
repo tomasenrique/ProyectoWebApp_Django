@@ -16,8 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf import settings  # Para agregar la ubicacion de almacenamiento de las imagenes
+from django.conf.urls.static import static  # Para agregar la url de la ubicacion del almacenamiento
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("ProyectoWebApp/", include("ProyectoWebApp.urls")),  # Agrega las urls de una aplicacion
 
 ]
+
+# Concatena las variables para poder agregar la ubicacion y la url de la ubicacion de las imagenes
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
