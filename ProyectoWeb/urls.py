@@ -22,8 +22,14 @@ from django.conf.urls.static import static  # Para agregar la url de la ubicacio
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("ProyectoWebApp/", include("ProyectoWebApp.urls")),  # Agrega las urls de una aplicacion
+    path('servicios/', include('servicios.urls'))
 
 ]
 
 # Concatena las variables para poder agregar la ubicacion y la url de la ubicacion de las imagenes
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+"""
+OJO ==>> esta es el archivo 'urls' principal del sistema
+
+"""
