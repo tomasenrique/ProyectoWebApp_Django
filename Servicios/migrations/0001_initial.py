@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
             ],
             options={
                 'verbose_name': 'servicio',
-                'verbose_name_plural': 'servicios',
+                'verbose_name_plural': 'Servicios',
             },
         ),
     ]

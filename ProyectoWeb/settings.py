@@ -36,7 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ProyectoWebApp',  # se registra la aplicacion, hay que hacer esto con cada una que se crea
-    'servicios',  # para el enlace de servicios de la pagina web
+    'Servicios',  # para el enlace de Servicios de la pagina web
 ]
 
 MIDDLEWARE = [

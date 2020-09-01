@@ -57,14 +57,14 @@
                 </li>
 
                 {% if request.path == '/home' %} active {% endif %}
-                {% if request.path == '/servicios' %} active {% endif %}
+                {% if request.path == '/Servicios' %} active {% endif %}
                 {% if request.path == '/tienda' %} active {% endif %}
                 {% if request.path == '/contactos' %} active {% endif %}
                 {% if request.path == '/blog' %} active {% endif %}
 
 
                 {% if '/' in request.path %} active {% endif %}   ==>> este no funciona bien
-                {% if '/servicios' in request.path %} active {% endif %}
+                {% if '/Servicios' in request.path %} active {% endif %}
                 {% if '/tienda' in request.path %} active {% endif %}
                 {% if '/contacto' in request.path %} active {% endif %}
                 {% if '/blog' in request.path %} active {% endif %}
@@ -75,7 +75,7 @@
                     <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Inicio</a>
                 </li>
 
-                <li class="nav-item {% if '/servicios' in request.path %} active {% endif %} px-lg-4 ">
+                <li class="nav-item {% if '/Servicios' in request.path %} active {% endif %} px-lg-4 ">
                     <a class="nav-link text-uppercase text-expanded" href="{% url 'Servicios' %}">Servicios</a>
                 </li>
 

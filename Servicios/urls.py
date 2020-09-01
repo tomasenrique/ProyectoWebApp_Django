@@ -15,10 +15,10 @@ Donde:
                                       url de la aplicacion.
 """
 from django.urls import path
-from servicios import views
+from Servicios import views
 
 urlpatterns = [
-    #path('servicios/', views.servicios, name="Servicios"), # cambiado por el de abajo
+    #path('Servicios/', views.Servicios, name="Servicios"), # cambiado por el de abajo
     path('', views.servicios, name="Servicios"),
 ]
 

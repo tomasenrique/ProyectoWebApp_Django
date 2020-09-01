@@ -22,7 +22,7 @@ from django.conf.urls.static import static  # Para agregar la url de la ubicacio
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("ProyectoWebApp/", include("ProyectoWebApp.urls")),  # Agrega las urls de una aplicacion
-    path('servicios/', include('servicios.urls'))
+    path('Servicios/', include('Servicios.urls'))  # agrega una aplicacion llamada servicios con sus urls
 
 ]
 
